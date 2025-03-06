@@ -7,10 +7,8 @@ import { Button } from "@/components/ui/button";
 const DigitalClock = () => {
   const [time, setTime] = useState<Date>(new Date());
   const [formatTime, setFormatTime] = useState<boolean>(true);
-  const [mounted, setMounted] = useState<boolean>(false);
 
   useEffect(() => {
-    setMounted(true);
     const interval = setInterval(() => {
       setTime(new Date());
     }, 1000);
